@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>siddharth. — 3D Data Analyst &amp; Power BI Specialist Portfolio</title>
+    <meta name="description" content="Siddharth's interactive 3D portfolio. Data &amp; Business Analyst, Vibe Coder, and Executive Power BI Specialist.">
+    <!-- developed by siddharth -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='28'%3E%F0%9F%8C%B8%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projects.css">
+</head>
+
+<body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <!-- 🌌 Interactive 3D WebGL Spatial Data Cosmos Canvas 🌌 -->
+    <canvas id="cosmosCanvas3D" class="cosmos-canvas-3d" aria-hidden="true"></canvas>
+
+    <!-- Ambient Depth Orbs -->
+    <div class="ambient-depth-layer" aria-hidden="true">
+        <div class="depth-orb orb-cerulean"></div>
+        <div class="depth-orb orb-rose"></div>
+    </div>
+
+    <section class="hero">
+        <header class="site-header">
+            <a class="wordmark" href="#main" aria-label="siddharth.">
+                siddharth<span>.</span>
+                <sup class="wordmark-3d-tag">3D</sup>
+            </a>
+            <nav aria-label="Primary">
+                <a class="nav-link nav-projects-highlight" href="projects.html">Projects</a>
+                <a class="nav-link" href="#data-engineering">Data Engineering</a>
+                <button type="button" class="nav-link" data-dialog="work">Work</button>
+                <button type="button" class="nav-link" data-dialog="about">About</button>
+                <a class="nav-link" href="#architecture-3d">3D Stack</a>
+                <a class="nav-link" href="#internship">Internship</a>
+                <a class="nav-link" href="#resume">Resume</a>
+                <button type="button" class="nav-sound-btn" id="soundToggleBtn" aria-label="Toggle tactile 3D key sound" title="Toggle mechanical keyboard audio">
+                    <span class="sound-dot"></span>
+                    <span id="soundToggleText">SFX ON</span>
+                </button>
+                <a class="nav-link nav-cta-pill" href="#contact" data-contact>Let's talk ↗</a>
+            </nav>
+        </header>
+
+        <main id="main" class="hero-main">
+            <!-- Floating Spatial Status Bar -->
+            <div class="hero-spatial-pills">
+                <div class="spatial-pill">
+                    <span class="pulse-ring"></span>
+                    <span>Data &amp; Business Analyst • Power BI Specialist • Vibe Coder</span>
+                </div>
+                <div class="spatial-pill spatial-pill-secondary">
+                    <span>Interactive 3D Mechanical Rig — Press keys or type P-O-R-T-F-O-L-I-O</span>
+                </div>
+            </div>
+
+            <h1 class="headline">
+                <span>Hi, I'm Siddharth.</span>
+                <span>turning data into insights <em>ideas into products</em></span>
+                <span>and code into reality.</span>
+            </h1>
+
+            <!-- 🎛️ 3D Camera Perspective Switcher 🎛️ -->
+            <div class="kb-controls-bar" aria-label="3D Keyboard Camera Angle Controls">
+                <span class="kb-controls-label">3D Gimbal View:</span>
+                <button type="button" class="kb-angle-btn active" data-kb-angle="iso">Isometric 3D</button>
+                <button type="button" class="kb-angle-btn" data-kb-angle="dramatic">Deep Sculpt</button>
+                <button type="button" class="kb-angle-btn" data-kb-angle="flat">Top-Down</button>
+            </div>
+
+            <!-- 🎹 3D Isometric Mechanical Keyboard Stage 🎹 -->
+            <div class="kb-wrap" id="kbWrap">
+                <div class="kb-stage-3d" id="kbStage3D">
+                    <div class="kb-chassis-3d" id="kbChassis3D">
+                        <!-- Extruded Aluminum Deck Base & Neon Underglow -->
+                        <div class="kb-deck-plate" aria-hidden="true">
+                            <div class="kb-deck-screw screw-tl"></div>
+                            <div class="kb-deck-screw screw-tr"></div>
+                            <div class="kb-deck-screw screw-bl"></div>
+                            <div class="kb-deck-screw screw-br"></div>
+                            <div class="kb-deck-brand">SIDDHARTH // ANALYTICS-MK1</div>
+                        </div>
+
+                        <div class="kb" id="kb" role="group" aria-label="Portfolio 3D keyboard">
+                            <button type="button" class="key row-top" data-key-char="P" style="--x:73px;--y:0px;--face:#ff4f9f;--base:#b81466"
+                                data-dialog="work" aria-label="Selected Work">
+                                <span class="key-wall-bottom" aria-hidden="true"></span>
+                                <span class="key-wall-side" aria-hidden="true"></span>
+                                <span class="face">
+                                    <span class="letter" aria-hidden="true">P</span>
+                                    <span class="cap" aria-hidden="true">SELECTED WORK</span>
+                                </span>
+                                <span class="seam seam-l" aria-hidden="true"></span>
+                                <span class="seam seam-r" aria-hidden="true"></span>
+                            </button>
+
+                            <button type="button" class="key row-top" data-key-char="O" style="--x:219px;--y:0px;--face:#4eb5e0;--base:#006287"
+                                data-dialog="about" aria-label="About Me">
+                                <span class="key-wall-bottom" aria-hidden="true"></span>
+                                <span class="key-wall-side" aria-hidden="true"></span>
+                                <span class="face">
+                                    <span class="letter" aria-hidden="true">O</span>
+                                    <span class="cap" aria-hidden="true">ABOUT ME</span>
+                                </span>
+                                <span class="seam seam-l" aria-hidden="true"></span>
+                                <span class="seam seam-r" aria-hidden="true"></span>
+                            </button>
+
+                            <button type="button" class="key row-top" data-key-char="R" style="--x:365px;--y:0px;--face:#ff63ac;--base:#bf156d"
+                                data-dialog="process" aria-label="My Process">
+                                <span class="key-wall-bottom" aria-hidden="true"></span>
+                                <span class="key-wall-side" aria-hidden="true"></span>
+                                <span class="face">
+                                    <span class="letter" aria-hidden="true">R</span>
+                                    <span class="cap" aria-hidden="true">MY PROCESS</span>
+                                </span>
+                                <span class="seam seam-l" aria-hidden="true"></span>
+                                <span class="seam seam-r" aria-hidden="true"></span>
+                            </button>
+
+                            <button type="button" class="key row-top" data-key-char="T" style="--x:511px;--y:0px;--face:#63c8f5;--base:#007ba7"
+                                data-dialog="approach" aria-label="What I Do">
+                                <span class="key-wall-bottom" aria-hidden="true"></span>
+                                <span class="key-wall-side" aria-hidden="true"></span>
+                                <span class="face">
+                                    <span class="letter" aria-hidden="true">T</span>
+                                    <span class="cap" aria-hidden="true">WHAT I DO</span>
+                                </span>
+                                <span class="seam seam-l" aria-hidden="true"></span>
+                                <span class="seam seam-r" aria-hidden="true"></span>
+                            </button>
+
+                            <button type="button" class="key row-low" data-key-char="F" style="--x:0px;--y:139px;--face:#3ea9d6;--base:#005575"
+                                data-dialog="work" aria-label="Explore">
+                                <span class="key-wall-bottom" aria-hidden="true"></span>
+                                <span class="key-wall-side" aria-hidden="true"></span>
+                                <span class="face">
+                                    <span class="letter" aria-hidden="true">F</span>
+                                    <span class="cap" aria-hidden="true">EXPLORE</span>
+                                </span>
+                                <span class="seam seam-l" aria-hidden="true"></span>
+                                <span class="seam seam-r" aria-hidden="true"></span>
+                            </button>
+
+                            <button type="button" class="key row-low" data-key-char="O" style="--x:146px;--y:139px;--face:#e960b0;--base:#a61466"
+                                data-dialog="about" aria-label="A Little About Me">
+                                <span class="key-wall-bottom" aria-hidden="true"></span>
+                                <span class="key-wall-side" aria-hidden="true"></span>
+                                <span class="face">
+                                    <span class="letter" aria-hidden="true">O</span>
+                                    <span class="cap" aria-hidden="true">A LITTLE ABOUT ME</span>
+                                </span>
+                                <span class="seam seam-l" aria-hidden="true"></span>
+                                <span class="seam seam-r" aria-hidden="true"></span>
+                            </button>
+
+                            <button type="button" class="key row-low" data-key-char="L" style="--x:292px;--y:139px;--face:#6fd0fa;--base:#006d94"
+                                data-dialog="process" aria-label="The Process">
+                                <span class="key-wall-bottom" aria-hidden="true"></span>
+                                <span class="key-wall-side" aria-hidden="true"></span>
+                                <span class="face">
+                                    <span class="letter" aria-hidden="true">L</span>
+                                    <span class="cap" aria-hidden="true">THE PROCESS</span>
+                                </span>
+                                <span class="seam seam-l" aria-hidden="true"></span>
+                                <span class="seam seam-r" aria-hidden="true"></span>
+                            </button>
+
+                            <button type="button" class="key row-low" data-key-char="I" style="--x:438px;--y:139px;--face:#51beeb;--base:#007ba7"
+                                data-dialog="approach" aria-label="My Approach">
+                                <span class="key-wall-bottom" aria-hidden="true"></span>
+                                <span class="key-wall-side" aria-hidden="true"></span>
+                                <span class="face">
+                                    <span class="letter" aria-hidden="true">I</span>
+                                    <span class="cap" aria-hidden="true">MY APPROACH</span>
+                                </span>
+                                <span class="seam seam-l" aria-hidden="true"></span>
+                                <span class="seam seam-r" aria-hidden="true"></span>
+                            </button>
+
+                            <a class="key row-low" data-key-char="O" style="--x:584px;--y:139px;--face:#ff6bb2;--base:#c7166e" href="#contact"
+                                data-contact aria-label="Contact Me">
+                                <span class="key-wall-bottom" aria-hidden="true"></span>
+                                <span class="key-wall-side" aria-hidden="true"></span>
+                                <span class="face">
+                                    <span class="letter" aria-hidden="true">O</span>
+                                    <span class="cap" aria-hidden="true">CONTACT ME</span>
+                                </span>
+                                <span class="seam seam-l" aria-hidden="true"></span>
+                                <span class="seam seam-r" aria-hidden="true"></span>
+                            </a>
+
+                            <a class="key key-enter" data-key-char="ENTER" style="--x:657px;--y:0;--face:#ff2d95;--base:#b80e60" href="#contact"
+                                data-contact aria-label="Let's talk">
+                                <span class="key-wall-bottom" aria-hidden="true"></span>
+                                <span class="key-wall-side" aria-hidden="true"></span>
+                                <span class="face">
+                                    <span class="letter arrow" aria-hidden="true">↗</span>
+                                    <span class="cap" aria-hidden="true">LET'S TALK</span>
+                                </span>
+                                <span class="seam seam-l" aria-hidden="true"></span>
+                                <span class="seam seam-r" aria-hidden="true"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating 3D Executive Telemetry Strip -->
+            <div class="hero-metrics-strip" aria-label="Portfolio Key Highlights">
+                <div class="metric-3d-card" data-tilt-3d data-max-tilt="8">
+                    <span class="metric-3d-val">4</span>
+                    <span class="metric-3d-label">End-to-End Power BI Suites</span>
+                </div>
+                <div class="metric-3d-card" data-tilt-3d data-max-tilt="8">
+                    <span class="metric-3d-val">3.4x</span>
+                    <span class="metric-3d-label">Marketing ROAS Modeled</span>
+                </div>
+                <div class="metric-3d-card" data-tilt-3d data-max-tilt="8">
+                    <span class="metric-3d-val">65k+</span>
+                    <span class="metric-3d-label">Consumer &amp; Retail SKUs Analyzed</span>
+                </div>
+                <div class="metric-3d-card" data-tilt-3d data-max-tilt="8">
+                    <span class="metric-3d-val">94%</span>
+                    <span class="metric-3d-label">Transit Demand Forecast Fit</span>
+                </div>
+            </div>
+        </main>
+
+        <div class="marquee">
+            <p class="marquee-text">Data-driven decisions. Thoughtful products. • I turn messy data and bold ideas into
+                clear, useful digital experiences. • Pick a key.</p>
+            <div class="track" id="track" aria-hidden="true">
+                <div class="group"><span class="item">Data-driven decisions. Thoughtful products. • I turn messy data
+                        and bold ideas into clear, useful digital experiences. • Pick a key.</span></div>
+                <div class="group"><span class="item">Data-driven decisions. Thoughtful products. • I turn messy data
+                        and bold ideas into clear, useful digital experiences. • Pick a key.</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📊 Featured Dashboards 3D Showcase Section 📊 -->
+    <section class="featured-dashboards-section" id="featured-dashboards" aria-labelledby="featured-dashboards-title">
+        <div class="featured-dashboards-inner">
+            <div class="featured-dashboards-header">
+                <div class="badge-pill">
+                    <span class="badge-pulse-dot"></span>
+                    <span>3D Holographic Power BI Analytics</span>
+                </div>
+                <h2 class="featured-title" id="featured-dashboards-title">Featured Dashboards</h2>
+                <p class="featured-subtitle">Hover any 3D holo-deck card to inspect in spatial perspective, open the interactive multi-page dashboard viewer right here, or explore the full PDF &amp; live apps.</p>
+            </div>
+
+            <div class="featured-preview-grid" id="homeFeaturedGrid">
+                <!-- Preview Card 1: Marketing ROI -->
+                <article class="preview-card" data-tilt-3d data-max-tilt="6.5" data-project-id="marketing-roi" data-project-target="project-marketing-roi" role="button" tabindex="0" aria-label="Open Marketing ROI project details">
+                    <div class="preview-img-link" title="Click to inspect Marketing ROI dashboard pages">
+                        <span class="preview-category-tag">Growth &amp; Attribution BI • Live App ⚡</span>
+                        <img id="homeCover-marketing-roi"
+                             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                             alt="Marketing ROI Dashboard Overview"
+                             class="preview-img">
+                        <div class="preview-img-overlay">
+                            <span class="preview-img-badge">Inspect 5 Interactive Pages ↗</span>
+                        </div>
+                    </div>
+                    <div class="preview-body">
+                        <div class="preview-card-meta">
+                            <span class="preview-index-pill">CASE STUDY 01</span>
+                            <span class="preview-pages-pill">5 Dashboard Pages</span>
+                        </div>
+                        <h3 class="preview-title">1. Marketing ROI</h3>
+                        <p class="preview-desc">Multi-channel campaign performance, blended CAC vs. customer LTV tracking, and interactive what-if profit &amp; loss budget scenario forecasting.</p>
+                        <div class="preview-kpi-trio">
+                            <div class="mini-kpi"><span>ROAS</span><strong>3.4x</strong></div>
+                            <div class="mini-kpi"><span>Profit YoY</span><strong>+24%</strong></div>
+                            <div class="mini-kpi"><span>Blended CAC</span><strong>-38%</strong></div>
+                        </div>
+                        <div class="preview-footer">
+                            <div class="preview-actions-group">
+                                <button type="button" class="preview-quickview-btn" data-quick-viewer="marketing-roi">
+                                    <span>3D Quick Inspect</span>
+                                </button>
+                                <a href="https://github.com/pattnaiksiddharth/market-roi-analysis"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="preview-pdf-link-btn preview-github-btn"
+                                   aria-label="Open GitHub repository for Marketing ROI"
+                                   onclick="event.stopPropagation();">
+                                    <span>GitHub ↗</span>
+                                </a>
+                                <a href="https://market-roi-analysis-jiwza9dmpsga95ee2f3hz4.streamlit.app/"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="preview-pdf-link-btn preview-streamlit-btn"
+                                   aria-label="Open live Streamlit app for Marketing ROI"
+                                   onclick="event.stopPropagation();">
+                                    <span>Live App ⚡</span>
+                                </a>
+                                <a href="https://drive.google.com/file/d/15rBanqRPwszG8kBhIeRGJS031AXZBQ-b/preview"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="preview-pdf-link-btn"
+                                   aria-label="Directly open Marketing ROI PDF report"
+                                   onclick="event.stopPropagation();">
+                                    <span>PDF ↗</span>
+                                </a>
+                                <button type="button" class="preview-link-btn" data-choice-trigger="marketing-roi">
+                                    <span>Explore ↗</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Preview Card 2: Indian Hair Growth Analysis -->
+                <article class="preview-card" data-tilt-3d data-max-tilt="6.5" data-project-id="indian-hair-growth" data-project-target="project-indian-hair-growth" role="button" tabindex="0" aria-label="Open Indian Hair Growth Analysis project details">
+                    <div class="preview-img-link" title="Click to inspect Indian Hair Growth Analysis dashboard case study">
+                        <span class="preview-category-tag">D2C Retention &amp; Cohort BI</span>
+                        <img id="homeCover-indian-hair-growth"
+                             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                             alt="Indian Hair Care Market Diagnostics"
+                             class="preview-img">
+                        <div class="preview-img-overlay">
+                            <span class="preview-img-badge">Inspect 4 Interactive Pages ↗</span>
+                        </div>
+                    </div>
+                    <div class="preview-body">
+                        <div class="preview-card-meta">
+                            <span class="preview-index-pill">CASE STUDY 02</span>
+                            <span class="preview-pages-pill">4 Dashboard Pages</span>
+                        </div>
+                        <h3 class="preview-title">2. Indian HAir Growth Analysis</h3>
+                        <p class="preview-desc">D2C market sizing, stage-by-stage customer drop-off funnels, monthly retention cohort heatmaps, and competitive product benchmarking.</p>
+                        <div class="preview-kpi-trio">
+                            <div class="mini-kpi"><span>M3 Retention</span><strong>68%</strong></div>
+                            <div class="mini-kpi"><span>Repeat Rate</span><strong>+42%</strong></div>
+                            <div class="mini-kpi"><span>Profiles</span><strong>15k+</strong></div>
+                        </div>
+                        <div class="preview-footer">
+                            <div class="preview-actions-group">
+                                <button type="button" class="preview-quickview-btn" data-quick-viewer="indian-hair-growth">
+                                    <span>3D Quick Inspect</span>
+                                </button>
+                                <a href="https://github.com/pattnaiksiddharth/indian-hair-market-analysis"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="preview-pdf-link-btn preview-github-btn"
+                                   aria-label="Open GitHub repository for Indian Hair Growth Analysis"
+                                   onclick="event.stopPropagation();">
+                                    <span>GitHub ↗</span>
+                                </a>
+                                <a href="https://drive.google.com/file/d/1jNQgoPNdc4WJ-oFfGSU9nx6ORtpsaRnE/preview"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="preview-pdf-link-btn"
+                                   aria-label="Directly open Indian Hair Growth Analysis PDF report"
+                                   onclick="event.stopPropagation();">
+                                    <span>View PDF ↗</span>
+                                </a>
+                                <button type="button" class="preview-link-btn" data-choice-trigger="indian-hair-growth">
+                                    <span>Explore ↗</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Preview Card 3: Bhubaneswar Traffic & Public Transport Demand -->
+                <article class="preview-card" data-tilt-3d data-max-tilt="6.5" data-project-id="bhubaneswar-transit-demand" data-project-target="project-bhubaneswar-transit-demand" role="button" tabindex="0" aria-label="Open Bhubaneswar Transit Demand project details">
+                    <div class="preview-img-link" title="Click to inspect Bhubaneswar Transit Demand dashboard case study">
+                        <span class="preview-category-tag">Smart City &amp; Geospatial BI</span>
+                        <img id="homeCover-bhubaneswar-transit-demand"
+                             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                             alt="Bhubaneswar Urban Transit Demand Dashboard"
+                             class="preview-img">
+                        <div class="preview-img-overlay">
+                            <span class="preview-img-badge">Inspect 3 Interactive Pages ↗</span>
+                        </div>
+                    </div>
+                    <div class="preview-body">
+                        <div class="preview-card-meta">
+                            <span class="preview-index-pill">CASE STUDY 03</span>
+                            <span class="preview-pages-pill">3 Dashboard Pages</span>
+                        </div>
+                        <h3 class="preview-title">3. Bhubaneswar Transit Demand</h3>
+                        <p class="preview-desc">Urban mobility intelligence mapping peak corridor congestion bottlenecks and time-series public transit fleet demand forecasting.</p>
+                        <div class="preview-kpi-trio">
+                            <div class="mini-kpi"><span>Congestion</span><strong>-28%</strong></div>
+                            <div class="mini-kpi"><span>Accuracy</span><strong>94%</strong></div>
+                            <div class="mini-kpi"><span>Transit Grid</span><strong>+120km</strong></div>
+                        </div>
+                        <div class="preview-footer">
+                            <div class="preview-actions-group">
+                                <button type="button" class="preview-quickview-btn" data-quick-viewer="bhubaneswar-transit-demand">
+                                    <span>3D Quick Inspect</span>
+                                </button>
+                                <a href="https://github.com/pattnaiksiddharth/bhubaneswar_urban_mobility"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="preview-pdf-link-btn preview-github-btn"
+                                   aria-label="Open GitHub repository for Bhubaneswar Transit Demand"
+                                   onclick="event.stopPropagation();">
+                                    <span>GitHub ↗</span>
+                                </a>
+                                <a href="https://drive.google.com/file/d/1v6XJZyAhxKwrvPMc62WkzeoR_h075hun/preview"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="preview-pdf-link-btn"
+                                   aria-label="Directly open Bhubaneswar Transit Demand PDF report"
+                                   onclick="event.stopPropagation();">
+                                    <span>View PDF ↗</span>
+                                </a>
+                                <button type="button" class="preview-link-btn" data-choice-trigger="bhubaneswar-transit-demand">
+                                    <span>Explore ↗</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Preview Card 4: Myntra Fashion Analysis -->
+                <article class="preview-card" data-tilt-3d data-max-tilt="6.5" data-project-id="myntra-fashion-analysis" data-project-target="project-myntra-fashion-analysis" role="button" tabindex="0" aria-label="Open Myntra Fashion Analysis project details">
+                    <div class="preview-img-link" title="Click to inspect Myntra Fashion Analysis dashboard case study">
+                        <span class="preview-category-tag">Retail Merchandising BI</span>
+                        <img id="homeCover-myntra-fashion-analysis"
+                             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                             alt="Myntra Fashion Catalog &amp; Pricing Analysis"
+                             class="preview-img">
+                        <div class="preview-img-overlay">
+                            <span class="preview-img-badge">Inspect 3 Interactive Pages ↗</span>
+                        </div>
+                    </div>
+                    <div class="preview-body">
+                        <div class="preview-card-meta">
+                            <span class="preview-index-pill">CASE STUDY 04</span>
+                            <span class="preview-pages-pill">3 Dashboard Pages</span>
+                        </div>
+                        <h3 class="preview-title">4. Myntra Fashion Analysis</h3>
+                        <p class="preview-desc">Deep retail catalog benchmarking evaluating brand pricing elasticity, discount strategies, customer sentiment ratings, and SKU velocity.</p>
+                        <div class="preview-kpi-trio">
+                            <div class="mini-kpi"><span>Sweet Spot</span><strong>45%</strong></div>
+                            <div class="mini-kpi"><span>Avg Rating</span><strong>4.3★</strong></div>
+                            <div class="mini-kpi"><span>Catalog SKUs</span><strong>50k+</strong></div>
+                        </div>
+                        <div class="preview-footer">
+                            <div class="preview-actions-group">
+                                <button type="button" class="preview-quickview-btn" data-quick-viewer="myntra-fashion-analysis">
+                                    <span>3D Quick Inspect</span>
+                                </button>
+                                <a href="https://drive.google.com/file/d/11ZqFBGcf_Q7Tlg8YK_CwVY2WJ8HvxQh6/preview"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="preview-pdf-link-btn"
+                                   aria-label="Directly open Myntra Fashion Analysis PDF report"
+                                   onclick="event.stopPropagation();">
+                                    <span>View PDF ↗</span>
+                                </a>
+                                <button type="button" class="preview-link-btn" data-choice-trigger="myntra-fashion-analysis">
+                                    <span>Explore ↗</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="featured-dashboards-cta">
+                <a href="projects.html" class="btn-view-all-projects" id="btnViewAllProjects" aria-label="View all projects">
+                    <span>Explore All 4 Case Studies &amp; Simulators &rarr;</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- 📊 /Featured Dashboards 3D Showcase Section 📊 -->
+
+    <!-- ⚡ Data Engineering Section ⚡ -->
+    <section class="data-engineering-section" id="data-engineering" aria-labelledby="data-eng-title">
+        <div class="data-engineering-inner">
+            <div class="featured-dashboards-header">
+                <div class="badge-pill badge-pill-cyan">
+                    <span class="badge-pulse-dot"></span>
+                    <span>Lakehouse &amp; Distributed Data Engineering</span>
+                </div>
+                <h2 class="featured-title" id="data-eng-title">Data Engineering</h2>
+                <p class="featured-subtitle">Production-grade distributed pipelines, Lakehouse architecture, automated multi-stage ETL workflows, and multi-system data reconciliation.</p>
+            </div>
+
+            <!-- NorthBridge Bank Showcase Card -->
+            <div class="data-eng-showcase-container">
+                <article class="data-eng-card" data-tilt-3d data-max-tilt="4.5" data-project-id="northbridge-banking" role="button" tabindex="0" aria-label="Open NorthBridge Bank pipeline exploration options">
+                    <div class="data-eng-grid-layout">
+                        <div class="data-eng-cover-wrap" title="Click to inspect NorthBridge Bank pipeline architecture &amp; snapshots">
+                            <span class="preview-category-tag">Databricks • Delta Lake • Multi-System Reconciliation</span>
+                            <img id="homeCover-northbridge-banking"
+                                 src="NorthBridge Bank - End-to-End Banking Data Pipeline/coverpage.png"
+                                 alt="NorthBridge Bank End-to-End Banking Data Pipeline Cover"
+                                 class="data-eng-cover-img"
+                                 loading="lazy">
+                            <div class="preview-img-overlay">
+                                <span class="preview-img-badge">Inspect 9 Architecture Snapshots ↗</span>
+                            </div>
+                        </div>
+
+                        <div class="data-eng-body">
+                            <div class="data-eng-header-meta">
+                                <div class="preview-card-meta">
+                                    <span class="preview-index-pill data-eng-index-pill">DATA ENGINEERING 01</span>
+                                    <span class="preview-pages-pill">9 Pipeline &amp; BI Snapshots</span>
+                                </div>
+                                <span class="data-eng-status-pill">
+                                    <span class="data-eng-status-dot"></span>
+                                    Live Pipeline Project
+                                </span>
+                            </div>
+
+                            <h3 class="data-eng-title">NorthBridge Bank — End-to-End Banking Data Pipeline</h3>
+                            
+                            <p class="data-eng-desc">
+                                NorthBridge Bank is a fictional retail bank whose data sits in three systems that disagree with each other: core banking, a payment gateway and a general ledger.
+                            </p>
+
+                            <!-- Key Architecture Metrics -->
+                            <div class="preview-kpi-trio">
+                                <div class="mini-kpi"><span>Systems</span><strong>3 Disagreeing</strong></div>
+                                <div class="mini-kpi"><span>Architecture</span><strong>Medallion Lakehouse</strong></div>
+                                <div class="mini-kpi"><span>Reconciliation</span><strong>100% Automated</strong></div>
+                            </div>
+
+                            <!-- Skills and Tools Blocks -->
+                            <div class="data-eng-skills-block">
+                                <div class="data-eng-skills-group">
+                                    <span class="data-eng-skills-label">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+                                        Tools:
+                                    </span>
+                                    <div class="chips-wrap">
+                                        <span class="chip-tool"><span class="chip-icon">⚡</span><span>Databricks</span></span>
+                                        <span class="chip-tool"><span class="chip-icon">🔥</span><span>Apache Spark</span></span>
+                                        <span class="chip-tool"><span class="chip-icon">💎</span><span>Delta Lake</span></span>
+                                        <span class="chip-tool"><span class="chip-icon">🐍</span><span>Python (PySpark)</span></span>
+                                        <span class="chip-tool"><span class="chip-icon">🗄️</span><span>SQL</span></span>
+                                        <span class="chip-tool"><span class="chip-icon">🐙</span><span>GitHub</span></span>
+                                    </div>
+                                </div>
+
+                                <div class="data-eng-skills-group">
+                                    <span class="data-eng-skills-label">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                        Skills &amp; Technologies:
+                                    </span>
+                                    <div class="chips-wrap">
+                                        <span class="chip-tech"><span class="chip-icon">🏗️</span><span>Medallion Architecture (Bronze/Silver/Gold)</span></span>
+                                        <span class="chip-tech"><span class="chip-icon">⚖️</span><span>Multi-System Data Reconciliation</span></span>
+                                        <span class="chip-tech"><span class="chip-icon">🔄</span><span>Automated ETL Pipelines</span></span>
+                                        <span class="chip-tech"><span class="chip-icon">🛡️</span><span>Data Quality &amp; Validation</span></span>
+                                        <span class="chip-tech"><span class="chip-icon">🔍</span><span>Fraud &amp; AML Analytics</span></span>
+                                        <span class="chip-tech"><span class="chip-icon">📊</span><span>Unity Catalog Governance</span></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Action Links Group (GitHub, YouTube, Project Report, Snapshots) -->
+                            <div class="data-eng-footer">
+                                <div class="preview-actions-group">
+                                    <a href="https://github.com/pattnaiksiddharth/northbridge-databricks-pipeline"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       class="preview-pdf-link-btn preview-github-btn"
+                                       aria-label="Open NorthBridge Bank pipeline GitHub repository"
+                                       onclick="event.stopPropagation();">
+                                        <span>GitHub Repo ↗</span>
+                                    </a>
+                                    <a href="https://youtu.be/y1rMyKNMYFY"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       class="preview-pdf-link-btn preview-youtube-btn"
+                                       aria-label="Watch NorthBridge Bank pipeline YouTube video"
+                                       onclick="event.stopPropagation();">
+                                        <span>YouTube Walkthrough ▶</span>
+                                    </a>
+                                    <a href="https://drive.google.com/file/d/145vHR3rSUEvU3nrhOFYvddeuLDsNX1Lz/view?usp=sharing"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       class="preview-pdf-link-btn"
+                                       aria-label="Open NorthBridge Bank Project Report"
+                                       onclick="event.stopPropagation();">
+                                        <span>Project Report 📄</span>
+                                    </a>
+                                    <button type="button" class="preview-quickview-btn" data-quick-viewer="northbridge-banking" onclick="event.stopPropagation();">
+                                        <span>9 Architecture Snapshots ↗</span>
+                                    </button>
+                                    <button type="button" class="preview-link-btn" data-choice-trigger="northbridge-banking">
+                                        <span>Explore Options ↗</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- ⚡ /Data Engineering Section ⚡ -->
+
+    <!-- 🧊 3D Analytical Architecture & Vibe Coding Stack 🧊 -->
+    <section class="architecture-3d-section" id="architecture-3d" aria-labelledby="arch-title">
+        <div class="architecture-3d-inner">
+            <div class="featured-dashboards-header">
+                <div class="badge-pill">
+                    <span class="badge-pulse-dot"></span>
+                    <span>Spatial Competence Cube</span>
+                </div>
+                <h2 class="featured-title" id="arch-title">Data Intelligence × Full-Stack Vibe Coding</h2>
+                <p class="featured-subtitle">Combining rigorous Star Schema modeling, DAX time intelligence, and SQL/Python ETL with modern full-stack product execution.</p>
+            </div>
+
+            <div class="arch-3d-grid">
+                <div class="arch-card-3d" data-tilt-3d data-max-tilt="8">
+                    <div class="arch-card-top">
+                        <span class="arch-layer-tag">LAYER 01 // BI &amp; MODELING</span>
+                        <span class="arch-icon-orb">📊</span>
+                    </div>
+                    <h3>Executive Power BI &amp; DAX</h3>
+                    <p>Star Schema data modeling, complex DAX measures, What-If parameter scenario planners, row-level security, and executive P&amp;L storytelling.</p>
+                    <div class="arch-chip-list">
+                        <span>Power BI Desktop</span>
+                        <span>DAX Studio</span>
+                        <span>Power Query M</span>
+                        <span>Star Schema</span>
+                    </div>
+                </div>
+
+                <div class="arch-card-3d" data-tilt-3d data-max-tilt="8">
+                    <div class="arch-card-top">
+                        <span class="arch-layer-tag">LAYER 02 // DATA ENGINEERING &amp; EDA</span>
+                        <span class="arch-icon-orb">🐍</span>
+                    </div>
+                    <h3>SQL, Python &amp; Predictive Analytics</h3>
+                    <p>Automated ETL pipelines, cohort retention matrices, price elasticity curves, time-series demand forecasting, and geospatial telemetry.</p>
+                    <div class="arch-chip-list">
+                        <span>SQL</span>
+                        <span>Python (Pandas/NumPy)</span>
+                        <span>Streamlit Apps</span>
+                        <span>Cohort &amp; Funnel EDA</span>
+                    </div>
+                </div>
+
+                <div class="arch-card-3d" data-tilt-3d data-max-tilt="8">
+                    <div class="arch-card-top">
+                        <span class="arch-layer-tag">LAYER 03 // PRODUCT &amp; VIBE CODING</span>
+                        <span class="arch-icon-orb">⚡</span>
+                    </div>
+                    <h3>Product Strategy &amp; Full-Stack Builder</h3>
+                    <p>Translating raw user telemetry and stakeholder requirements into intuitive digital experiences, interactive web applications, and high-impact tools.</p>
+                    <div class="arch-chip-list">
+                        <span>Product Analytics</span>
+                        <span>Full-Stack Web</span>
+                        <span>AI Vibe Coding</span>
+                        <span>KPI Benchmarking</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 💼 Internship 💼 -->
+    <section class="internship" id="internship" aria-labelledby="internship-title">
+        <div class="internship-inner">
+            <div class="badge-pill" style="margin-bottom: 14px;">
+                <span class="badge-pulse-dot"></span>
+                <span>Industry Experience</span>
+            </div>
+            <h2 id="internship-title">Internship</h2>
+            <div class="intern-card" data-tilt-3d data-max-tilt="5">
+                <div class="intern-card-glow-bar" aria-hidden="true"></div>
+                <div class="intern-header">
+                    <div class="intern-meta">
+                        <p class="intern-company">Techsofin Private Limited <span class="intern-startup">(Let's DriEV)</span></p>
+                        <p class="intern-location">📍 Bhubaneswar, India</p>
+                    </div>
+                    <div class="intern-role-block">
+                        <p class="intern-role">Product and Data Analyst Intern</p>
+                        <p class="intern-dates">May 2026 - July 2026</p>
+                    </div>
+                </div>
+                <ul class="intern-bullets">
+                    <li>Analyzed product and business data using SQL, Python, and Excel to identify trends and support data-driven decision-making.</li>
+                    <li>Developed interactive Power BI dashboards to track KPIs and visualize business performance.</li>
+                    <li>Conducted EDA to uncover customer behavior patterns and business trends that informed strategic decisions.</li>
+                    <li>Analyzed product metrics and user feedback to evaluate feature performance and present insights to stakeholders.</li>
+                </ul>
+                <div class="intern-tools" aria-label="Tools used">
+                    <span class="tool-chip">SQL</span>
+                    <span class="tool-chip">Excel</span>
+                    <span class="tool-chip">Power BI</span>
+                    <span class="tool-chip">Python</span>
+                    <span class="tool-chip">Product Metrics</span>
+                    <span class="tool-chip">EDA</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 💼 /Internship 💼 -->
+
+    <!-- 📄 Resume Section 📄 -->
+    <section class="resume-section" id="resume" aria-labelledby="resume-title">
+        <div class="resume-inner">
+            <div class="badge-pill" style="margin-bottom: 14px;">
+                <span class="badge-pulse-dot"></span>
+                <span>Curriculum Vitae</span>
+            </div>
+            <h2 id="resume-title">Resume</h2>
+            <p class="resume-subtitle">Professional background, core data competencies, and analytical track record.</p>
+
+            <div class="resume-card" data-tilt-3d data-max-tilt="4">
+                <div class="resume-card-glow-bar" aria-hidden="true"></div>
+                <div class="resume-card-content">
+                    <div class="resume-placeholder-icon" aria-hidden="true">
+                        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="resume-card-info">
+                        <div class="resume-header-row">
+                            <div>
+                                <h3 class="resume-candidate-name">Siddharth Pattnaik</h3>
+                                <p class="resume-candidate-title">Data &amp; Business Analyst • Power BI Specialist • Data Engineer</p>
+                            </div>
+                            <span class="resume-status-badge">
+                                <span class="resume-status-dot"></span>
+                                Document in Preparation
+                            </span>
+                        </div>
+                        <p class="resume-notice-text">
+                            The updated resume document is currently being finalized and will be uploaded here shortly. In the meantime, feel free to explore my data projects above or reach out directly.
+                        </p>
+                        <div class="resume-actions">
+                            <button type="button" class="btn-resume-disabled" disabled aria-disabled="true">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7 10 12 15 17 10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                                <span>PDF Upload Coming Soon</span>
+                            </button>
+                            <a href="#contact" class="btn-resume-contact" data-contact>
+                                <span>Get in Touch ↗</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/k-siddharth-pattnaik-4844443ab" target="_blank" rel="noopener noreferrer" class="btn-resume-linkedin">
+                                <span>LinkedIn Profile ↗</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 📄 /Resume Section 📄 -->
+
+    <!-- ✉️ Contact ✉️ -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact-3d-shell" data-tilt-3d data-max-tilt="4">
+            <div class="badge-pill">
+                <span class="badge-pulse-dot"></span>
+                <span>Open for Data Analyst &amp; Product Roles</span>
+            </div>
+            <h2 id="contact-title">Good decisions<br>start with hello.</h2>
+            <p class="invite">Have a project in mind, a data problem, or just want to say hi?</p>
+            <a class="email" data-contact data-email-text href="#contact">pattnaiksiddharth1@gmail.com</a>
+
+            <p class="github-note">Want to see my projects? Visit my
+                <a class="github-inline" href="https://github.com/pattnaiksiddharth"
+                    target="_blank" rel="noopener noreferrer"
+                    aria-label="Siddharth's GitHub profile (opens in a new tab)">GitHub profile</a>.
+            </p>
+
+            <nav class="social-links" aria-label="Social profiles">
+                <a class="social-link" href="https://github.com/pattnaiksiddharth"
+                    target="_blank" rel="noopener noreferrer"
+                    aria-label="Siddharth on GitHub (opens in a new tab)">
+                    <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+                    </svg>
+                    GitHub
+                </a>
+                <a class="social-link" href="https://www.linkedin.com/in/k-siddharth-pattnaik-4844443ab"
+                    target="_blank" rel="noopener noreferrer"
+                    aria-label="Siddharth on LinkedIn (opens in a new tab)">
+                    <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    LinkedIn
+                </a>
+                <a class="social-link" href="https://leetcode.com/u/KSiddharthPattnaik/"
+                    target="_blank" rel="noopener noreferrer"
+                    aria-label="Siddharth on LeetCode (opens in a new tab)">
+                    <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/>
+                    </svg>
+                    LeetCode
+                </a>
+                <a class="social-link" href="projects.html" aria-label="Explore all Power BI Dashboards">
+                    📊 All 4 Power BI Case Studies
+                </a>
+            </nav>
+        </div>
+
+        <footer>
+            <p>developed by siddharth • interactive 3D spatial edition</p>
+        </footer>
+    </section>
+
+    <!-- Modal Dialogs for Keyboard Keys -->
+    <dialog id="info" aria-labelledby="info-title">
+        <div class="dialog-body">
+            <div class="dialog-key-badge" id="dialogKeyBadge">KEY CAP</div>
+            <h2 id="info-title"></h2>
+            <p id="info-text"></p>
+            <div class="actions">
+                <a class="btn btn-contact" data-contact href="#contact">Say it with an email</a>
+                <a class="btn btn-close" id="dialogProjectsBtn" href="projects.html" style="background: linear-gradient(135deg, #007BA7 0%, #FF2D95 100%); color: #FFFFFF; border: none; display: none;">View Dashboards →</a>
+                <button type="button" class="btn btn-close" id="info-close">Close</button>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- 🌟 Project Showcase Modal (Displays ALL Photos & Headings) 🌟 -->
+    <dialog id="projectViewerModal" class="project-modal" aria-labelledby="modalProjectTitle">
+        <div class="project-modal-wrapper">
+            <div class="project-modal-header">
+                <div class="modal-header-left">
+                    <h2 class="modal-project-title" id="modalProjectTitle">Project Title</h2>
+                    <p class="modal-project-subtitle" id="modalProjectSubtitle">Category &amp; Description</p>
+                </div>
+                <div class="modal-header-actions">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="modal-btn-pdf" id="modalPdfBtn">
+                        <span>Open Full PDF Report ↗</span>
+                    </a>
+                    <button type="button" class="modal-btn-close" id="modalCloseBtn" aria-label="Close dialog">✕</button>
+                </div>
+            </div>
+            <!-- Quick Page Jump List -->
+            <nav class="modal-nav-pills" id="modalNavPills" aria-label="Jump to Dashboard Page">
+                <!-- Dynamic Jump Pills -->
+            </nav>
+            <!-- Scrollable list of ALL pages with headings and full photos -->
+            <div class="modal-pages-scroll" id="modalPagesScroll">
+                <!-- Dynamic Pages with Headings -->
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Three.js WebGL Engine + Portfolio Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+    <script src="projects-data.js"></script>
+    <script src="project-viewer.js"></script>
+    <script src="js/scene3d.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
