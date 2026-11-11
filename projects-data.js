@@ -671,6 +671,83 @@
         { value: 100, prefix: "", suffix: "%", label: "Automated Lakehouse Pipeline" },
         { value: 9, prefix: "", suffix: " Stages", label: "Validated End-to-End Architecture" }
       ]
+    },
+    {
+      id: "fraud-detection-pipeline",
+      title: "6. Real-Time Card Fraud Detection Pipeline",
+      displayName: "Real-Time Card Fraud Detection Pipeline",
+      category: "Data Engineering & Lakehouse",
+      section: "data-engineering",
+      featured: true,
+      subtitle: "Streaming Fraud Detection with Explainable Rules, LLM Triage & Analyst Console",
+      description: "A streaming pipeline that flags fraudulent card transactions with explainable rules, has an LLM explain each flag, and lets analysts record a decision.",
+      folder: "Real TIme fraud detection pipeline using LLM alert service",
+      coverImage: "Real TIme fraud detection pipeline using LLM alert service/coverpage.png",
+      fallbackCover: "Real TIme fraud detection pipeline using LLM alert service/coverpage.png",
+      githubLink: "https://github.com/pattnaiksiddharth/fraud-pipeline",
+      youtubeLink: "https://youtu.be/NCplOyPFYws?si=QTu9FoiK_mCE-lf5",
+      screenshots: [
+        {
+          src: "Real TIme fraud detection pipeline using LLM alert service/coverpage.png",
+          fallbackSrc: "Real TIme fraud detection pipeline using LLM alert service/coverpage.png",
+          heading: "Pipeline Architecture & Cover",
+          title: "Pipeline Architecture & Cover",
+          caption: "End-to-end streaming architecture: Kafka → PySpark Structured Streaming → Delta Lake (bronze/silver/gold) → PostgreSQL → LLM triage → Streamlit & Grafana."
+        },
+        {
+          src: "Real TIme fraud detection pipeline using LLM alert service/grafana_ss.png",
+          fallbackSrc: "Real TIme fraud detection pipeline using LLM alert service/coverpage.png",
+          heading: "Grafana Monitoring Dashboard",
+          title: "Grafana Monitoring Dashboard",
+          caption: "Real-time Grafana dashboard tracking fraud alerts, rule precision, detection latency, and alert volume across streaming windows."
+        }
+      ],
+      tools: [
+        { name: "Python", icon: "python" },
+        { name: "SQL", icon: "database" },
+        { name: "PySpark", icon: "etl" },
+        { name: "PowerShell", icon: "code" },
+        { name: "Apache Kafka", icon: "etl" },
+        { name: "Spark Structured Streaming", icon: "etl" },
+        { name: "Delta Lake", icon: "schema" },
+        { name: "PostgreSQL", icon: "database" },
+        { name: "Apache Airflow", icon: "sliders" },
+        { name: "OpenAI API", icon: "code" },
+        { name: "Grafana", icon: "trending" },
+        { name: "Streamlit", icon: "trending" },
+        { name: "Docker", icon: "database" },
+        { name: "Docker Compose", icon: "database" },
+        { name: "Git", icon: "code" },
+        { name: "GitHub", icon: "code" }
+      ],
+      technologies: [
+        { name: "Streaming Pipelines", icon: "etl" },
+        { name: "Medallion Lakehouse Design", icon: "schema" },
+        { name: "Schema Validation & Quarantine", icon: "search" },
+        { name: "Idempotent Writes", icon: "database" },
+        { name: "Checkpoint Recovery", icon: "etl" },
+        { name: "Batch Maintenance (Compaction & Vacuum)", icon: "sliders" },
+        { name: "Reconciliation Checks", icon: "search" },
+        { name: "Quality Gates in Airflow", icon: "sliders" },
+        { name: "Time-Window Aggregations", icon: "trending" },
+        { name: "Geospatial Distance (Haversine)", icon: "map" },
+        { name: "Per-Entity Baselines", icon: "trending" },
+        { name: "Rule Design & Threshold Tuning", icon: "sliders" },
+        { name: "Precision & Recall Evaluation", icon: "search" },
+        { name: "LLM Structured JSON Output", icon: "code" },
+        { name: "Output Validation & Retries", icon: "etl" },
+        { name: "Cost Control & Prompt-Injection Awareness", icon: "code" },
+        { name: "Triggers & Constraints", icon: "database" },
+        { name: "Least-Privilege Roles", icon: "database" },
+        { name: "Optimistic Concurrency", icon: "database" },
+        { name: "Containerized Multi-Service Systems", icon: "etl" },
+        { name: "Resource Limits & Cross-Platform Debugging", icon: "sliders" }
+      ],
+      insights: [
+        { value: 82.6, prefix: "", suffix: "%", label: "Burst Rule Precision (10s window)" },
+        { value: 92.6, prefix: "", suffix: "%", label: "Burst Rule Recall (5min window)" },
+        { value: 6, prefix: "", suffix: " Services", label: "Dockerized Streaming Stack" }
+      ]
     }
   ];
 

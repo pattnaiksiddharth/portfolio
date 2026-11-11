@@ -2208,6 +2208,23 @@ body.projects-page {
 
 .data-eng-showcase-container {
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+@media (max-width: 960px) {
+  .data-eng-showcase-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.data-eng-showcase-container .data-eng-grid-layout {
+  grid-template-columns: 1fr;
+}
+
+.data-eng-showcase-container .data-eng-cover-wrap {
+  min-height: 240px;
 }
 
 .data-eng-card {
